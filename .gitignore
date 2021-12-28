@@ -27,6 +27,8 @@ bld/
 
 # Visual Studio 2015 cache/options directory
 .vs/
+# Visual Studio Code
+.vscode/
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
 
@@ -284,6 +286,7 @@ Mutagen.Bethesda.Skyrim/Mutagen.Bethesda.Skyrim.xml
 
 Mutagen.Bethesda.Tests/TestingSettings.json
 
+Mutagen.Bethesda.Fallout4/Mutagen.Bethesda.Fallout3NV.xml
 Mutagen.Bethesda.Fallout4/Mutagen.Bethesda.Fallout4.xml
 
 Mutagen.Bethesda.Sqlite/Mutagen.Bethesda.Sqlite.xml
