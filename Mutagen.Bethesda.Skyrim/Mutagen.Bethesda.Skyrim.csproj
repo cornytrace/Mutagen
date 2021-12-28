@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-	<TargetFrameworks>net5.0;net6.0</TargetFrameworks>
+    <TargetFrameworks>net5.0;net6.0</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Authors>Noggog</Authors>
@@ -2095,6 +2095,6 @@
     <ProjectReference Include="..\Mutagen.Bethesda.Core\Mutagen.Bethesda.Core.csproj" />
   </ItemGroup>
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="RD /S /Q &quot;%25USERPROFILE%25\.nuget\packages\mutagen.bethesda.skyrim&quot;" />
+    <Exec Condition="!$([MSBuild]::IsOSUnixLike())" Command="RD /S /Q &quot;%25USERPROFILE%25\.nuget\packages\mutagen.bethesda.skyrim&quot;" />
   </Target>
 </Project>

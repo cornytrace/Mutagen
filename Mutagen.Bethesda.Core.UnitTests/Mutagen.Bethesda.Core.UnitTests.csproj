@@ -2,7 +2,6 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-        <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
         <WarningsAsErrors>nullable</WarningsAsErrors>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <RootNamespace>Mutagen.Bethesda.UnitTests</RootNamespace>
@@ -41,14 +40,14 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Mutagen.Bethesda.Autofac\Mutagen.Bethesda.Autofac.csproj" />
-      <ProjectReference Include="..\Mutagen.Bethesda.Core\Mutagen.Bethesda.Core.csproj" />
-      <ProjectReference Include="..\Mutagen.Bethesda.Json\Mutagen.Bethesda.Json.csproj" />
-      <ProjectReference Include="..\Mutagen.Bethesda.Skyrim\Mutagen.Bethesda.Skyrim.csproj" />
-      <ProjectReference Include="..\Mutagen.Bethesda.SourceGenerators\Mutagen.Bethesda.SourceGenerators.csproj" />
-      <ProjectReference Include="..\Mutagen.Bethesda.Sqlite\Mutagen.Bethesda.Sqlite.csproj" />
-      <ProjectReference Include="..\Mutagen.Bethesda.Testing\Mutagen.Bethesda.Testing.csproj" />
-      <ProjectReference Include="..\Mutagen.Bethesda.WPF\Mutagen.Bethesda.WPF.csproj" />
+        <ProjectReference Include="..\Mutagen.Bethesda.Autofac\Mutagen.Bethesda.Autofac.csproj" />
+        <ProjectReference Include="..\Mutagen.Bethesda.Core\Mutagen.Bethesda.Core.csproj" />
+        <ProjectReference Include="..\Mutagen.Bethesda.Json\Mutagen.Bethesda.Json.csproj" />
+        <ProjectReference Include="..\Mutagen.Bethesda.Skyrim\Mutagen.Bethesda.Skyrim.csproj" />
+        <ProjectReference Include="..\Mutagen.Bethesda.SourceGenerators\Mutagen.Bethesda.SourceGenerators.csproj" />
+        <ProjectReference Include="..\Mutagen.Bethesda.Sqlite\Mutagen.Bethesda.Sqlite.csproj" />
+        <ProjectReference Include="..\Mutagen.Bethesda.Testing\Mutagen.Bethesda.Testing.csproj" />
+        <ProjectReference Condition="!$([MSBuild]::IsOSUnixLike())" Include="..\Mutagen.Bethesda.WPF\Mutagen.Bethesda.WPF.csproj" />
     </ItemGroup>
 
     <ItemGroup>

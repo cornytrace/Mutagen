@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	<TargetFrameworks>net5.0;net6.0</TargetFrameworks>
+    <TargetFrameworks>net5.0;net6.0</TargetFrameworks>
     <Authors>Noggog</Authors>
     <Company>Mutagen</Company>
     <Product>Mutagen</Product>
@@ -24,7 +24,7 @@
   </PropertyGroup>
 
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="RD /S /Q &quot;%25USERPROFILE%25\.nuget\packages\mutagen.bethesda.kernel&quot;" />
+    <Exec Condition="!$([MSBuild]::IsOSUnixLike())" Command="RD /S /Q &quot;%25USERPROFILE%25\.nuget\packages\mutagen.bethesda.kernel&quot;" />
   </Target>
 
   <ItemGroup>
